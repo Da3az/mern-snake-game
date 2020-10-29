@@ -32,11 +32,11 @@ app.get('*',(req,res)=>{
   res.sendFile(path.resolve(__dirname,'public','index.html'))
 })
 
-app.get('/',(req,res)=>{
+app.get('/scores',(req,res)=>{
   console.log(req.body)
   Score.find().sort({score:-1})
               .limit(10)
-                   .then(scores => res.send(scores))
+                   .then(scores => res.json(scores))
                    .catch(err => res.status(400).json('Error: ' + err))
 })
 
