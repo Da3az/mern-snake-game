@@ -25,17 +25,19 @@ const options = {
   }
 };
 
+
+
+app.use(express.static('public'));
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(__dirname,'public','index.html'))
+})
+
 app.get('/',(req,res)=>{
   console.log(req.body)
   Score.find().sort({score:-1})
               .limit(10)
                    .then(scores => res.send(scores))
                    .catch(err => res.status(400).json('Error: ' + err))
-})
-
-app.use(express.static('public'));
-app.get('*',(req,res)=>{
-  res.sendFile(path.resolve(__dirname,'public','index.html'))
 })
 
 app.post('/',(req,res)=>{
