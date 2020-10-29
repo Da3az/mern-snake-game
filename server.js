@@ -29,7 +29,7 @@ app.get('/',(req,res)=>{
   console.log(req.body)
   Score.find().sort({score:-1})
               .limit(10)
-                   .then(scores => res.json(scores))
+                   .then(scores => res.send(scores))
                    .catch(err => res.status(400).json('Error: ' + err))
 })
 
