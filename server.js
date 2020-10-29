@@ -14,7 +14,7 @@ connection.once('open',()=>console.log('mongodb database'))
 
 app.use(cors());
 app.use(express.json());
-
+const path = require('path')
 // const query =  ;
 const options = {
   sort: {score:1},
@@ -31,6 +31,11 @@ app.get('/',(req,res)=>{
               .limit(10)
                    .then(scores => res.json(scores))
                    .catch(err => res.status(400).json('Error: ' + err))
+})
+
+app.use(express.static('public'));
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(__dirname,'public','index.html'))
 })
 
 app.post('/',(req,res)=>{
