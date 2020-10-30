@@ -24,21 +24,25 @@ const options = {
     username:1
   }
 };
+ app.use(express.static('public'))
 
-
-
-app.use(express.static('public'));
-app.get('*',(req,res)=>{
-  res.sendFile(path.resolve(__dirname,'public','index.html'))
-})
-
-app.get('/scores',(req,res)=>{
+ app.get('/scores',(req,res)=>{
   console.log(req.body)
   Score.find().sort({score:-1})
               .limit(10)
                    .then(scores => res.json(scores))
                    .catch(err => res.status(400).json('Error: ' + err))
 })
+
+
+ app.get('*',(req,res)=>{
+   res.sendFile(path.resolve(__dirname,'public','index.html'))
+ })
+
+
+
+
+
 
 app.post('/',(req,res)=>{
   console.log('request message >>>>>>>>',req.body);
@@ -50,6 +54,7 @@ app.post('/',(req,res)=>{
           .then(() => res.json('New score'))
           .catch(err => res.status(400).json('Error: ' + err))
 })
+
 
 
 app.listen(port,() => console.log('Server is running'))
