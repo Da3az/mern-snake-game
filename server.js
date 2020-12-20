@@ -25,6 +25,7 @@ const options = {
   }
 };
  app.use(express.static('public'))
+ 
 
  app.get('/scores',(req,res)=>{
   console.log(req.body)
@@ -38,8 +39,6 @@ const options = {
  app.get('*',(req,res)=>{
    res.sendFile(path.resolve(__dirname,'public','index.html'))
  })
-
-
 
 
 
