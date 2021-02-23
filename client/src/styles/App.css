@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.app {
+  text-align: center;
+  background-color: #351818;
+  color: white;
+  /* height: 100vh; */
+  width: 100vw;
+  margin: 0px;
+  display: flex;
+  /* justify-content:space-around; */
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__header{
+  /* width:max-content; */
+  margin: 0px;
+  display:flex;
+   /* justify-content:space-around; */
+  background-color: #4f2424;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #482828;
+  color:orange
+}
+
+.app__header div{
+  margin: auto;
+}
+
+.snake{
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  /* padding-top: 10vh; */
+}
+
+.snake svg{
+  height:30px;
+  width:30px;
+  margin:10px;
+  margin-left: 20px;
+  margin-right: auto;
+  /* margin:auto ; */
+}
+
+.app__header .user{
+  margin-right: 20px;
+}
+
+.app__body{
+  display: flex;
+  flex-direction:column;
+  /* flex-direction: column; */
+  padding:0px 30px;
+  /* justify-content: space-between; */
+}
+
+.app__score{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.app__score .score{
+  margin-bottom: 20px;
+}
+
+.scoreboard ol{
+ text-align: left;
+ /* padding-left: 20px; */
+}
+
+.app__header .form {
+  display: flex;
+  margin-right: 20px;
+}
+
+#user{
+  margin-top: 2px;
+  
+  border-left: 2px solid blue;
+}
+
+
+
+.form button{
+  /* padding:0px; */
+  background-color:orange;
+  
+}
+
+.form *{
+  padding:2px !important;
+  border: none;
+}
+
+.app_game{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content:center
+}
+
+.app__header .links{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: 2em;
+  width: 40%;
+}
+
+.app__header .links div{
+  cursor: pointer;
+  display: flex;
+  padding-bottom:5px
+}
+
+
+.app__header .links div svg{
+  width:1.3em;
+  height:1.3em;
+}
+
+.app__header .links div:first-child{
+  border-bottom: 2px solid blue;
+}
+
+
+
+.app__header button{
+  width:50px;
+  cursor: pointer;
+  background-color:#4e6e58;
+  border:none;
+  color:#7adfbb
+}
+
+.app__header .user p:last-child{
+  color:white;
+}  

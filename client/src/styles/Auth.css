@@ -1,0 +1,22 @@
+.auth{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.612);
+    z-index: 50
+}
+
+.auth label{
+    font-size:.7em;
+    width:5em;
+    display: flex;
+    margin-left: 30px;
+    margin-bottom:5px
+  }
+  
+  .auth input{
+    background-color: #421d1d;
+    border-bottom: 1px solid black;
+    outline: none;
+    color:rgb(189, 169, 169)
+  }

@@ -1,0 +1,29 @@
+.alert{
+    width: 420px;
+    height: 420px;
+    background-color:whitesmoke;
+    color: black;
+    padding: 20px;
+    position:absolute;
+    z-index: 7;
+    left:-20px;
+    top:-20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+}
+
+.alert_body{
+    padding-top: 40px;
+    width: 250px;
+    height: 150px;
+    background-color:whitesmoke
+}
+
+.alert button{
+    margin-left:180px;
+    margin-top: 50px;
+    padding: 5px !important;
+    display: flex;
+}
