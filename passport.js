@@ -37,7 +37,7 @@ passport.use(new LocalStrategy({ usernameField:'email'},(email,password,done)=>{
         if(!user)
             return done(null,false,'User not found');
         // check if password is correct
-        user.comparePassword(password,done());
+        user.comparePassword(password,done);
         
     });
 }));
