@@ -5,7 +5,7 @@
 ## Description
 
 
-You can register and sign to play a simple snake game;you also check top 10 scores of everyone who played the game.
+You can register and sign to play a simple snake game;you can also check top 10 scores of everyone who played the game.
 
 Live demo on https://snake-react-game.herokuapp.com/
 
